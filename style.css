@@ -1,0 +1,200 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --color: #e60b16;
+    --color1: #333333;
+    --color2: #080400;
+    --color3: #6f6f6b;
+}
+
+body,
+html {
+    height: 100vh;
+    width: 100%;
+}
+
+body {
+    background-image: url(./background.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: grid;
+    place-content: center;
+}
+
+form {
+    height: 530px;
+    width: 450px;
+    border-radius: 5px;
+    padding: 50px;
+    background-color: rgba(0, 0, 0, 0.773);
+    color: #ddd;
+    backdrop-filter: blur(20px);
+    display: grid;
+    grid-template-columns: 1fr;
+    place-content: center;
+    row-gap: 15px;
+}
+
+form .input-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+form .input {
+    position: relative;
+    background-color: var(--color1);
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    padding-top: 10px;
+}
+
+form .input input {
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #ddd;
+    font-size: 1.1rem;
+}
+
+form .input input:focus+label,
+form .input input:valid+label {
+    font-size: 12px;
+    transform: translateY(-21px);
+}
+
+form .input label {
+    position: absolute;
+    color: var(--color3);
+    left: 6px;
+    bottom: auto;
+    transition: all .3s ease;
+    margin-bottom: 6px;
+}
+
+form .input button {
+    border: none;
+    background-color: transparent;
+    width: 40px;
+    height: 100%;
+}
+
+form .sign-in {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+}
+
+form .sign-in .button-sign-in input[type=submit] {
+    height: 56px;
+    width: 100%;
+    background-color: var(--color);
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+}
+
+form .conect {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 5px 0px;
+    padding: 5px 0px;
+}
+
+form .conect img {
+    width: 20px;
+}
+
+form .conect .other-ways {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 5px;
+    color: var(--color3);
+}
+
+form .sign-in .acess {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+form .sign-in .acess input[type=checkbox] {
+    vertical-align: middle;
+}
+
+/* form .sign-in .remember-me {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 12px;
+} */
+
+form .sign-in .acess label {
+    color: var(--color3);
+}
+
+form .sign-in .acess a {
+    text-decoration: none;
+    color: var(--color3);
+}
+
+
+
+form .information .information-tittle {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    row-gap: 20px;
+    color: var(--color3);
+}
+
+form .information .information-tittle #link-sign-up {
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding-left: 5px;
+    color: #fff;
+}
+
+form #link-learn {
+    text-decoration: none;
+    color: rgb(0, 119, 255);
+}
+
+@media (max-width:768px) {
+    form {
+        width: 380px;
+        padding: 15px;
+    }
+
+    form .input-group {
+        width: 100%;
+    }
+}
